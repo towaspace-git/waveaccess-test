@@ -8,6 +8,7 @@ import {
 } from "../../../redux/actions/actions";
 import { IActiveCarProps } from "../../Car/ActiveCar/ActiveCar";
 import { ICompletedCarProps } from "../../Car/CompletedCar/CompletedCar";
+import {generateId} from '../../../redux/idGenerator/idGenerator'
 interface IModalProps {
   addCar: (car: IActiveCarProps) => void;
 }
@@ -32,7 +33,7 @@ const Modal = ({ addCar }: IModalProps) => {
   };
   const clickHandler = () => {
     const car: IActiveCarProps = {
-      id: 1,
+      id: generateId(),
       carArrivalDate: new Date().toDateString(),
       carName: carNameValue,
       carProblem: carProblemValue,
