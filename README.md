@@ -1,3 +1,3 @@
-Test app for Waveaccess.
+Test app for WaveAccess.
 <br/>
-Typescript/React/Redux
+Typescript/React/Redux/Bootstrap
