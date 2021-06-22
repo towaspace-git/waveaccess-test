@@ -39,7 +39,7 @@ const Header = () => {
             <div className="navbar-nav">
               {linkArray.map((link) => {
                 return (
-                  <Link className={`nav-link ${link.to === location.pathname ? "active": ""}`} to={link.to}>
+                  <Link className={`nav-link ${link.to === location.pathname ? "active": ""}`} to={link.to} key={link.linkText}>
                     {link.linkText}
                   </Link>
                 );
@@ -55,7 +55,7 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      <Modal></Modal>
+      <Modal/>
     </>
   );
 };

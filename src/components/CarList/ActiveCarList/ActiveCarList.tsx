@@ -1,4 +1,4 @@
-import React, { Dispatch } from "react";
+import React, { Dispatch, useEffect } from "react";
 import classes from "../CarList.module.css";
 import ActiveCar from "../../Car/ActiveCar/ActiveCar";
 import { IActiveCarProps } from "../../Car/ActiveCar/ActiveCar";
@@ -7,24 +7,30 @@ import { IRootState } from "../../../redux/rootState/rootState";
 import {
   ActiveCarActionTypes,
   CompletedCarActionTypes,
-  IActiveCarAction,
   CarAction
 } from "../../../redux/actions/actions";
 import Layout from "../../Layout/Layout";
+import { setStateToLocalStorage } from "../../../common/localStorage/localStorage";
+import { ICompletedCarProps } from "../../Car/CompletedCar/CompletedCar";
 
 interface IActiveCarListProps {
   cars: IActiveCarProps[];
+  completedCars: ICompletedCarProps[]
   completeCar: (car: IActiveCarProps) => void;
 }
 
-const ActiveCarList = ({ cars, completeCar }: IActiveCarListProps) => {
-  console.log(cars);
+const ActiveCarList = ({ cars, completedCars, completeCar }: IActiveCarListProps) => {
+  useEffect(() =>{
+    console.log("setLocalStorage")
+    setStateToLocalStorage('active', {cars});
+    setStateToLocalStorage('completed', {cars: completedCars})
+  }, [cars])
   return (
     <Layout>
       <div className={classes.CarListWrapper}>
         {cars.map((car) => {
           return (
-            <ActiveCar {...car} onClick={() => completeCar(car)}></ActiveCar>
+            <ActiveCar key={car.id} {...car} onClick={() => completeCar(car)}/>
           );
         })}
       </div>
@@ -34,6 +40,7 @@ const ActiveCarList = ({ cars, completeCar }: IActiveCarListProps) => {
 
 const mapStateToProps = (state: IRootState) => ({
   cars: state.activeCars.cars,
+  completedCars: state.completedCars.cars
 });
 const mapDispatchToProps = (dispatch: Dispatch<CarAction>) => ({
   completeCar: (car: IActiveCarProps) => {

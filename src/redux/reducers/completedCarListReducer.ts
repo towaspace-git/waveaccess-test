@@ -6,7 +6,7 @@ import {
 import {
   getStateFromLocalStorage,
   setStateToLocalStorage,
-} from "../localStorage/localStorage";
+} from "../../common/localStorage/localStorage";
 
 export interface ICompletedCarListState {
   cars: ICompletedCarProps[];
@@ -23,12 +23,10 @@ export const completedCarListReducer = (
   switch (action.type) {
     case CompletedCarActionTypes.clearCars: {
       const newState = { ...state, cars: [] };
-      setStateToLocalStorage("completed", newState);
       return newState;
     }
     case CompletedCarActionTypes.completeCar: {
       const newState = { ...state, cars: [...state.cars, action.payload] };
-      setStateToLocalStorage("completed", newState);
       return newState;
     }
     default:

@@ -2,13 +2,10 @@ import React, { Dispatch, useState } from "react";
 import { connect } from "react-redux";
 import {
   ActiveCarActionTypes,
-  CompletedCarActionTypes,
   IActiveCarAction,
-  ICompletedCarAction,
 } from "../../../redux/actions/actions";
 import { IActiveCarProps } from "../../Car/ActiveCar/ActiveCar";
-import { ICompletedCarProps } from "../../Car/CompletedCar/CompletedCar";
-import {generateId} from '../../../redux/idGenerator/idGenerator'
+import {generateId} from '../../../common/idGenerator/idGenerator'
 interface IModalProps {
   addCar: (car: IActiveCarProps) => void;
 }
