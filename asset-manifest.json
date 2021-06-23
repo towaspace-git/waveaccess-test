@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/waveaccess-test/static/css/main.da4a0783.chunk.css",
+    "main.js": "/waveaccess-test/static/js/main.45281a6f.chunk.js",
+    "main.js.map": "/waveaccess-test/static/js/main.45281a6f.chunk.js.map",
+    "runtime-main.js": "/waveaccess-test/static/js/runtime-main.8a416de1.js",
+    "runtime-main.js.map": "/waveaccess-test/static/js/runtime-main.8a416de1.js.map",
+    "static/css/2.15a7a700.chunk.css": "/waveaccess-test/static/css/2.15a7a700.chunk.css",
+    "static/js/2.2049490b.chunk.js": "/waveaccess-test/static/js/2.2049490b.chunk.js",
+    "static/js/2.2049490b.chunk.js.map": "/waveaccess-test/static/js/2.2049490b.chunk.js.map",
+    "static/js/3.165e0edc.chunk.js": "/waveaccess-test/static/js/3.165e0edc.chunk.js",
+    "static/js/3.165e0edc.chunk.js.map": "/waveaccess-test/static/js/3.165e0edc.chunk.js.map",
+    "index.html": "/waveaccess-test/index.html",
+    "static/css/2.15a7a700.chunk.css.map": "/waveaccess-test/static/css/2.15a7a700.chunk.css.map",
+    "static/css/main.da4a0783.chunk.css.map": "/waveaccess-test/static/css/main.da4a0783.chunk.css.map",
+    "static/js/2.2049490b.chunk.js.LICENSE.txt": "/waveaccess-test/static/js/2.2049490b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a416de1.js",
+    "static/css/2.15a7a700.chunk.css",
+    "static/js/2.2049490b.chunk.js",
+    "static/css/main.da4a0783.chunk.css",
+    "static/js/main.45281a6f.chunk.js"
+  ]
+}
