@@ -5,7 +5,7 @@ import {
   IActiveCarAction,
 } from "../../../redux/actions/actions";
 import { IActiveCarProps } from "../../Car/ActiveCar/ActiveCar";
-import {generateId} from '../../../common/idGenerator/idGenerator'
+import { generateId } from "../../../common/idGenerator/idGenerator";
 interface IModalProps {
   addCar: (car: IActiveCarProps) => void;
 }
@@ -55,7 +55,6 @@ const Modal = ({ addCar }: IModalProps) => {
       setCarNameValue("");
       setCarProblemValue("");
     }
-    
   };
   return (
     <div

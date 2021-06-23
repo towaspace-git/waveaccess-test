@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
-import {useLocation} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 const Header = () => {
-  const location = useLocation()
+  const location = useLocation();
   interface ILink {
     to: string;
     linkText: string;
@@ -39,7 +39,13 @@ const Header = () => {
             <div className="navbar-nav">
               {linkArray.map((link) => {
                 return (
-                  <Link className={`nav-link ${link.to === location.pathname ? "active": ""}`} to={link.to} key={link.linkText}>
+                  <Link
+                    className={`nav-link ${
+                      link.to === location.pathname ? "active" : ""
+                    }`}
+                    to={link.to}
+                    key={link.linkText}
+                  >
                     {link.linkText}
                   </Link>
                 );
@@ -55,7 +61,7 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      <Modal/>
+      <Modal />
     </>
   );
 };
