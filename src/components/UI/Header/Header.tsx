@@ -10,11 +10,11 @@ const Header = () => {
   }
   const linkArray: ILink[] = [
     {
-      to: "/active",
+      to: "/waveaccess-test/active",
       linkText: "Active",
     },
     {
-      to: "/completed",
+      to: "/waveaccess-test/completed",
       linkText: "Completed",
     },
   ];

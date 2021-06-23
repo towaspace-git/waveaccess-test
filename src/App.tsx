@@ -6,11 +6,11 @@ import CompletedCarList from "./components/CarList/CompletedCarList/CompletedCar
 function App() {
   return (
     <BrowserRouter>
-      <Redirect from="/" to="/active"></Redirect>
-      <Route path="/active" exact>
+      <Redirect from="/waveaccess-test/" to="/waveaccess-test/active"></Redirect>
+      <Route path="/waveaccess-test/active" exact>
         <ActiveCarList></ActiveCarList>
       </Route>
-      <Route path="/completed" exact>
+      <Route path="/waveaccess-test/completed" exact>
         <CompletedCarList></CompletedCarList>
       </Route>
     </BrowserRouter>
