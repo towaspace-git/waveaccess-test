@@ -28,7 +28,7 @@ const ActiveCarList = ({
     console.log("setLocalStorage");
     setStateToLocalStorage("active", { cars });
     setStateToLocalStorage("completed", { cars: completedCars });
-  }, [cars]);
+  }, [cars, completedCars]);
   return (
     <Layout>
       <div className={classes.CarListWrapper}>

@@ -10,16 +10,19 @@ import {
   CompletedCarActionTypes,
 } from "../../../redux/actions/actions";
 import { setStateToLocalStorage } from "../../../common/localStorage/localStorage";
+import { IActiveCarProps } from "../../Car/ActiveCar/ActiveCar";
 interface ICompletedCarListProps {
   cars: ICompletedCarProps[];
+  activeCars: IActiveCarProps[];
   clearCars: () => void;
 }
 
-const CompletedCarList = ({ cars, clearCars }: ICompletedCarListProps) => {
+const CompletedCarList = ({ cars, activeCars, clearCars }: ICompletedCarListProps) => {
   useEffect(() => {
     console.log("setLocalStorage");
+    setStateToLocalStorage("active", {cars: activeCars});
     setStateToLocalStorage("completed", { cars });
-  }, [cars]);
+  }, [cars, activeCars]);
   return (
     <Layout>
       <div className={classes.CarListWrapper}>
@@ -41,6 +44,7 @@ const CompletedCarList = ({ cars, clearCars }: ICompletedCarListProps) => {
 };
 const mapStateToProps = (state: IRootState) => ({
   cars: state.completedCars.cars,
+  activeCars: state.activeCars.cars
 });
 const mapDispatchToProps = (dispatch: Dispatch<CarAction>) => ({
   clearCars: () => dispatch({ type: CompletedCarActionTypes.clearCars }),

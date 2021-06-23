@@ -35,7 +35,6 @@ const Modal = ({ addCar }: IModalProps) => {
       carName: carNameValue,
       carProblem: carProblemValue,
     };
-    const modal = document.getElementById("modal");
     let forms = document.querySelectorAll(".needs-validation");
     Array.prototype.slice.call(forms).forEach(function (form) {
       form.addEventListener(
